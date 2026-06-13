@@ -47,6 +47,13 @@ python3 -m venv .venv
 
 ## 🖥️ How to Run
 
+> [!IMPORTANT]
+> **To avoid the `zsh: command not found: python` error on macOS, you MUST run the application using the local virtual environment Python executable:**
+>
+> **`./.venv/bin/python demo.py`**
+>
+> **Or activate the environment first via `source .venv/bin/activate` and then run `python demo.py`.**
+
 Run the application using the virtual environment python interpreter:
 ```bash
 .venv/bin/python demo.py
