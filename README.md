@@ -6,21 +6,24 @@ This project is part of the CodeAlpha Internship program.
 
 ## 🚀 Features
 
+- **Premium Modern Design**: Features a highly polished slate-dark UI theme built with CustomTkinter, rounded corners, responsive layout, and smooth interactions.
+- **Audio Visualizer**: Interactive canvas-based sound-wave spectrum animation that pulses dynamically to the playback.
 - **Format Variety**: Play audio files across multiple popular formats, including `.mp3`, `.wav`, `.ogg`, `.flac`, and `.m4a`.
-- **Easy Directory Navigation**: Load entire folders of music with a single click.
-- **Classic Playback Controls**: Easily `Play`, `Pause`, `Resume`, and `Stop` music tracks.
-- **Interactive Playlist**: View loaded tracks in a list, select with a click, or double-click any track to play it instantly.
-- **Sleek Modern Design**: Features a customized slate-dark UI theme built on Tkinter's `ttk` styling engine.
-- **Robust Error Handling**: Displays helpful alerts if files are unsupported or corrupted.
-- **Graceful Termination**: Ensures pygame resources are cleanly released when exiting the app.
+- **Metadata Support**: Automatically extracts song titles, artist names, and exact durations using `mutagen`.
+- **Seekable Progress Bar**: Scrub or click anywhere on the progress bar to seek to different parts of the track.
+- **Volume & Mute Controls**: Seamlessly adjust volume with a custom slider and toggle mute.
+- **Classic Playback Controls**: Easily `Play`, `Pause`, `Resume`, `Stop`, `Next`, and `Previous` tracks.
+- **Interactive Playlist**: View loaded tracks in a custom list with interactive hover-state rows; select a track or double-click to play immediately.
+- **Auto-Play Queue**: Automatically plays the next track when the current song completes.
 
 ---
 
 ## 🛠️ Tech Stack & Dependencies
 
 - **Language**: Python 3.x
-- **GUI Library**: `tkinter` (Standard Python Library)
+- **GUI Library**: `customtkinter` (Modern Tkinter wrapper)
 - **Audio Engine**: `pygame`
+- **Metadata Reader**: `mutagen`
 - **Path Operations**: `pathlib`
 
 ---
@@ -33,29 +36,26 @@ git clone https://github.com/YOUR_USERNAME/CodeAlpha_MusicPlayer.git
 cd CodeAlpha_MusicPlayer
 ```
 
-### 2. Install Dependencies
-You will need `pygame` installed. You can install it using `pip`:
+### 2. Set Up Virtual Environment & Install Dependencies
+Create a virtual environment and install the required libraries:
 ```bash
-pip install pygame
+python3 -m venv .venv
+.venv/bin/pip install customtkinter pygame mutagen
 ```
 
 ---
 
 ## 🖥️ How to Run
 
-Run the application using Python:
+Run the application using the virtual environment python interpreter:
 ```bash
-python demo.py
+.venv/bin/python demo.py
 ```
 
 ### How to Use:
-1. Click the **Choose Folder** button to load a directory containing your audio files.
-2. Select a song from the playlist.
-3. Use the control buttons (**Play**, **Pause**, **Resume**, **Stop**) to manage playback, or simply **double-click** a song in the list to play it immediately.
+1. Click the **Open Music Folder** button to load a directory containing your audio files.
+2. Click any track in the playlist sidebar on the left.
+3. Use the control buttons (**Play**, **Stop**, **Prev**, **Next**) to manage playback.
+4. Drag or click the **Seekbar** to fast-forward/rewind.
+5. Control the volume with the slider or click the speaker icon to mute/unmute.
 
----
-
-## 📂 Project Structure
-
-- `demo.py`: Main application code containing UI setup, playback functions, and styling configuration.
-- `README.md`: Project documentation.
