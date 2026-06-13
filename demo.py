@@ -6,7 +6,9 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import pygame
+# pyrefly: ignore [missing-import]
 import customtkinter as ctk
+# pyrefly: ignore [missing-import]
 import mutagen
 
 AUDIO_EXTENSIONS = {".mp3", ".wav", ".ogg", ".flac", ".m4a"}
